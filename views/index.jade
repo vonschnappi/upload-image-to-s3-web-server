@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1=title
+
+  form(name="upload-image", method="post", action="/images/upload", enctype="multipart/form-data")
+    div.input
+        input(type="file", name="image")
+    div.actions
+        input(type="submit", value="Upload")
