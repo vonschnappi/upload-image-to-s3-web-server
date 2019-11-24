@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var formidable = require('formidable');
-var helpers = require(process.cwd() + '/modules/helpers.js')
+var helpers = require('../helpers/helpers.js')
 var fs = require('fs');
 
 /* GET images listing. */
