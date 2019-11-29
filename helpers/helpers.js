@@ -8,7 +8,8 @@ module.exports = {
         var params = {
             Body: fs.readFileSync(file.path),
             Bucket: process.env.BUCKET, 
-            Key: file.name
+            Key: file.name,
+            ACL: 'public-read'
         };
 
         s3.putObject(params, function(err, data){
@@ -33,8 +34,5 @@ module.exports = {
                 }
             });
         });
-
-    
-  
     }
 }

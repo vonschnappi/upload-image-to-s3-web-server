@@ -3,6 +3,7 @@ var router = express.Router();
 var formidable = require('formidable');
 var helpers = require('../helpers/helpers.js')
 var fs = require('fs');
+var bucketName = process.env.BUCKET
 
 /* GET images listing. */
 router.get('/', function(req, res, next) {
@@ -11,7 +12,7 @@ router.get('/', function(req, res, next) {
     console.log(data);
     res.render('images', { title: 'list of images', 
                           images: data.Contents, 
-                          bucket: 'bucketmeupnivi',
+                          bucket: bucketName,
                           awsBucketDomain: 's3.amazonaws.com'});
   });
 });
