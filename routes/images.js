@@ -36,7 +36,6 @@ router.post('/upload', function(req, res, next) {
       res.redirect('/images')
     });
 
-
 });
 
 module.exports = router;
