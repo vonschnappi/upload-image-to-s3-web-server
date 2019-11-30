@@ -12,6 +12,6 @@ See this repo for more information.
 3. /images/upload - an endpoint accessible through post request to upload images to S3.
 
 ## How to run
-The webserver is not a standalone. It's supposed to be used in conjunction with another repo that contains the cloudfomration
+The webserver is not a standalone. It's supposed to be used in conjunction with [another repo](https://github.com/vonschnappi/image-resize-cloudformation-lambda) that contains the cloudfomration
 template and the lambda function for resizing images. When you deploy the cloudformation and lambda, simply specify the repo
 in the cloud formation parameter section.
